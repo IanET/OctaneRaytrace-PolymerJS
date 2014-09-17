@@ -1,0 +1,48 @@
+
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="bower_components/core-icons/core-icons.html">
+<link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+<link rel="import" href="bower_components/paper-fab/paper-fab.html">
+
+<polymer-element name="octane-app">
+  <template>
+    <style>
+      ::host {
+        font-family: RobotoDraft, sans-serif;
+        color: #333;
+        margin: 0;
+      }
+      
+      core-toolbar {
+        background-color: #455ede;
+        box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 1.5em;
+      }
+
+      paper-fab {
+        position: absolute !important;
+        top: 35px;
+        right: 1em;
+        z-index: 1;
+      }
+      
+      div#textview {
+        font-size: 14pt;
+      }
+    </style>
+  
+    <core-toolbar>
+      <span flex>OctaneRaytrace-PolymerJS toolbar</span>
+      <paper-fab icon="refresh" on-click="{{handleRefresh}}"></paper-fab>
+    </core-toolbar>
+  
+    <section>
+      <div id='textview'>{{text}}</div>
+    </section>
+  
+  </template>
+  <script src="octane-app.js"></script>
+</polymer-element>
